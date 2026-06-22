@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)file:///Users/fernandamoreira/Downloads/Healthcare_Social_Media_Planner_EN_v2.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healthcare Social Media Planner 2026-2027</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f4f6f9;margin:0}
+header{background:#111827;color:#fff;padding:16px}
+.container{padding:20px}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:15px}
+button,select{padding:8px 12px}
+.post{background:#fff;border-radius:10px;padding:12px;margin:10px 0;border-left:8px solid #ccc}
+.meta{border-left-color:#d946ef}
+.linkedin{border-left-color:#2563eb}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+input,textarea,select{width:100%;padding:6px;box-sizing:border-box}
+.badge{padding:4px 8px;border-radius:20px;color:white}
+.rascunho{background:#6b7280}.revisao{background:#eab308;color:black}
+.aprovado{background:#16a34a}.publicado{background:#1e3a8a}
+.small{font-size:12px;color:#666}
+</style>
+</head>
+<body>
+<header><h2>Healthcare Social Media Planner (Jul/2026–Jul/2027)</h2></header>
+<div class="container">
+<div class="toolbar">
+<select id="month"><option value="2026-07">2026-07</option><option value="2026-08">2026-08</option><option value="2026-09">2026-09</option><option value="2026-10">2026-10</option><option value="2026-11">2026-11</option><option value="2026-12">2026-12</option><option value="2027-01">2027-01</option><option value="2027-02">2027-02</option><option value="2027-03">2027-03</option><option value="2027-04">2027-04</option><option value="2027-05">2027-05</option><option value="2027-06">2027-06</option><option value="2027-07">2027-07</option></select>
+<button onclick="addPost()">Add Post</button>
+<button onclick="saveDate()">Save Locally</button>
+<button onclick="exportMonth()">Export Month</button>
+<button onclick="exportAll()">Export All</button>
+</div>
+<div id="stats"><b>4</b> approved/published out of <b>4</b> posts</div>
+<div id="posts"><div class="post linkedin">
+<div class="grid">
+<div><label>Date</label><input value="07/07/2026" onchange="upd(0,&#39;date&#39;,this.value)"></div>
+<div><label>Platform</label><select onchange="upd(0,&#39;platform&#39;,this.value)">
+<option>Meta</option>
+<option selected="">LinkedIn</option>
+</select></div>
+<div><label>Format</label><input value="Single Image" onchange="upd(0,&#39;format&#39;,this.value)"></div>
+<div><label>Status</label><select onchange="upd(0,&#39;status&#39;,this.value)">
+<option>Draft</option>
+<option>Review</option>
+<option selected="">Approved</option>
+<option>Published</option>
+</select></div>
+</div>
+<label>Title</label><input value="Für jeden Patienten zählt jede Diagnose" onchange="upd(0,&#39;title&#39;,this.value)">
+<label>Copy</label><textarea rows="4" oninput="upd(0,&#39;copy&#39;,this.value)">Hinter jeder Probe steht ein Tier, dessen Versorgung eine fundierte Entscheidung braucht. In der Praxis müssen Befunde präzise sein und den nächsten Schritt unterstützen.
+
+Antech unterstützt Tierärzt:innen mit diagnostischen Lösungen, die auf die Anforderungen moderner Praxen und Kliniken abgestimmt sind.
+
+So wird Diagnostik zu einer verlässlichen Grundlage im Praxisalltag.
+
+</textarea>
+<div class="small">378 caracteres</div>
+<label>Hashtags</label><input value="#AntechDiagnostics #VetDiagnostik #Veterinärmedizin #Tiergesundheit #Tierarztpraxis" onchange="upd(0,&#39;hashtags&#39;,this.value)">
+<label>CTA</label><input value="" onchange="upd(0,&#39;cta&#39;,this.value)">
+<label>Internal Notes</label><textarea onchange="upd(0,&#39;notes&#39;,this.value)"></textarea>
+<p><button onclick="duplicatePost(0)">Duplicate</button> <button onclick="deletePost(0)">Delete</button></p></div><div class="post meta">
+<div class="grid">
+<div><label>Date</label><input value="07/07/2026" onchange="upd(1,&#39;date&#39;,this.value)"></div>
+<div><label>Platform</label><select onchange="upd(1,&#39;platform&#39;,this.value)">
+<option selected="">Meta</option>
+<option>LinkedIn</option>
+</select></div>
+<div><label>Format</label><input value="Single Image" onchange="upd(1,&#39;format&#39;,this.value)"></div>
+<div><label>Status</label><select onchange="upd(1,&#39;status&#39;,this.value)">
+<option>Draft</option>
+<option>Review</option>
+<option selected="">Approved</option>
+<option>Published</option>
+</select></div>
+</div>
+<label>Title</label><input value="Für jeden Patienten zählt jede Diagnose" onchange="upd(1,&#39;title&#39;,this.value)">
+<label>Copy</label><textarea rows="4" oninput="upd(1,&#39;copy&#39;,this.value)">Hinter jeder Probe steht ein Tier, dessen Versorgung eine fundierte Entscheidung braucht. In der Praxis müssen Befunde präzise sein und den nächsten Schritt unterstützen.
+
+Antech unterstützt Tierärzt:innen mit diagnostischen Lösungen, die auf die Anforderungen moderner Praxen und Kliniken abgestimmt sind.
+
+So wird Diagnostik zu einer verlässlichen Grundlage im Praxisalltag.
+
+</textarea>
+<div class="small">378 caracteres</div>
+<label>Hashtags</label><input value="#AntechDiagnostics #VetDiagnostik #Veterinärmedizin #Tiergesundheit #Tierarztpraxis" onchange="upd(1,&#39;hashtags&#39;,this.value)">
+<label>CTA</label><input value="" onchange="upd(1,&#39;cta&#39;,this.value)">
+<label>Internal Notes</label><textarea onchange="upd(1,&#39;notes&#39;,this.value)"></textarea>
+<p><button onclick="duplicatePost(1)">Duplicate</button> <button onclick="deletePost(1)">Delete</button></p></div><div class="post meta">
+<div class="grid">
+<div><label>Date</label><input value="14/07/2026" onchange="upd(2,&#39;date&#39;,this.value)"></div>
+<div><label>Platform</label><select onchange="upd(2,&#39;platform&#39;,this.value)">
+<option selected="">Meta</option>
+<option>LinkedIn</option>
+</select></div>
+<div><label>Format</label><input value="Carousel" onchange="upd(2,&#39;format&#39;,this.value)"></div>
+<div><label>Status</label><select onchange="upd(2,&#39;status&#39;,this.value)">
+<option>Draft</option>
+<option>Review</option>
+<option selected="">Approved</option>
+<option>Published</option>
+</select></div>
+</div>
+<label>Title</label><input value="" onchange="upd(2,&#39;title&#39;,this.value)">
+<label>Copy</label><textarea rows="4" oninput="upd(2,&#39;copy&#39;,this.value)"></textarea>
+<div class="small">0 caracteres</div>
+<label>Hashtags</label><input value="" onchange="upd(2,&#39;hashtags&#39;,this.value)">
+<label>CTA</label><input value="" onchange="upd(2,&#39;cta&#39;,this.value)">
+<label>Internal Notes</label><textarea onchange="upd(2,&#39;notes&#39;,this.value)"></textarea>
+<p><button onclick="duplicatePost(2)">Duplicate</button> <button onclick="deletePost(2)">Delete</button></p></div><div class="post linkedin">
+<div class="grid">
+<div><label>Date</label><input value="14/07/2026" onchange="upd(3,&#39;date&#39;,this.value)"></div>
+<div><label>Platform</label><select onchange="upd(3,&#39;platform&#39;,this.value)">
+<option>Meta</option>
+<option selected="">LinkedIn</option>
+</select></div>
+<div><label>Format</label><input value="Carousel" onchange="upd(3,&#39;format&#39;,this.value)"></div>
+<div><label>Status</label><select onchange="upd(3,&#39;status&#39;,this.value)">
+<option>Draft</option>
+<option>Review</option>
+<option selected="">Approved</option>
+<option>Published</option>
+</select></div>
+</div>
+<label>Title</label><input value="" onchange="upd(3,&#39;title&#39;,this.value)">
+<label>Copy</label><textarea rows="4" oninput="upd(3,&#39;copy&#39;,this.value)"></textarea>
+<div class="small">0 caracteres</div>
+<label>Hashtags</label><input value="" onchange="upd(3,&#39;hashtags&#39;,this.value)">
+<label>CTA</label><input value="" onchange="upd(3,&#39;cta&#39;,this.value)">
+<label>Internal Notes</label><textarea onchange="upd(3,&#39;notes&#39;,this.value)"></textarea>
+<p><button onclick="duplicatePost(3)">Duplicate</button> <button onclick="deletePost(3)">Delete</button></p></div></div>
+</div>
+
+<script>
+const months=[];
+let d=new Date(2026,6,1);
+for(let i=0;i<13;i++){months.push(d.toISOString().slice(0,7)); d.setMonth(d.getMonth()+1);}
+
+const select=document.getElementById('month');
+months.forEach(m=>{let o=document.createElement('option');o.value=m;o.textContent=m;select.appendChild(o);});
+
+let data=JSON.parse(localStorage.getItem('plannerDate')||'null');
+
+if(!data){
+data={};
+months.forEach(m=>data[m]=[]);
+data["2026-07"]=[
+{date:"2026-07-07",platform:"Meta",format:"Carousel",status:"Approved",title:"IA na triagem clínica",copy:"Exemplo MedTech sobre IA em saúde.",hashtags:"#saude #medtech",cta:"Saiba mais",notes:""},
+{date:"2026-07-10",platform:"Meta",format:"Reels",status:"Draft",title:"Telemedicina",copy:"Benefícios da telemedicina.",hashtags:"#telemedicina",cta:"Agende",notes:""},
+{date:"2026-07-14",platform:"LinkedIn",format:"Article",status:"Review",title:"Transformação Digital",copy:"Insights para gestores.",hashtags:"#healthcare",cta:"Leia",notes:""},
+{date:"2026-07-17",platform:"LinkedIn",format:"Image",status:"Published",title:"Interoperabilidade",copy:"Integração de dados.",hashtags:"#digitalhealth",cta:"Converse",notes:""}
+];
+}
+
+function saveDate(){
+localStorage.setItem('plannerDate',JSON.stringify(data));
+alert('Date saved locally.');
+}
+
+function render(){
+const m=select.value;
+const wrap=document.getElementById('posts');
+wrap.innerHTML='';
+const arr=data[m]||[];
+
+let aprov=arr.filter(x=>x.status==="Approved"||x.status==="Published").length;
+document.getElementById('stats').innerHTML=`<b>${aprov}</b> approved/published out of <b>${arr.length}</b> posts`;
+
+arr.forEach((p,i)=>{
+let div=document.createElement('div');
+div.className='post '+(p.platform==="Meta"?'meta':'linkedin');
+div.innerHTML=`
+<div class="grid">
+<div><label>Date</label><input value="${p.date}" onchange="upd(${i},'date',this.value)"></div>
+<div><label>Platform</label><select onchange="upd(${i},'platform',this.value)">
+<option ${p.platform==='Meta'?'selected':''}>Meta</option>
+<option ${p.platform==='LinkedIn'?'selected':''}>LinkedIn</option>
+</select></div>
+<div><label>Format</label><input value="${p.format}" onchange="upd(${i},'format',this.value)"></div>
+<div><label>Status</label><select onchange="upd(${i},'status',this.value)">
+<option ${p.status==='Draft'?'selected':''}>Draft</option>
+<option ${p.status==='Review'?'selected':''}>Review</option>
+<option ${p.status==='Approved'?'selected':''}>Approved</option>
+<option ${p.status==='Published'?'selected':''}>Published</option>
+</select></div>
+</div>
+<label>Title</label><input value="${p.title}" onchange="upd(${i},'title',this.value)">
+<label>Copy</label><textarea rows="4" oninput="upd(${i},'copy',this.value)">${p.copy}</textarea>
+<div class="small">${p.copy.length} caracteres</div>
+<label>Hashtags</label><input value="${p.hashtags}" onchange="upd(${i},'hashtags',this.value)">
+<label>CTA</label><input value="${p.cta}" onchange="upd(${i},'cta',this.value)">
+<label>Internal Notes</label><textarea onchange="upd(${i},'notes',this.value)">${p.notes}</textarea>
+<p><button onclick="duplicatePost(${i})">Duplicate</button> <button onclick="deletePost(${i})">Delete</button></p>`;
+wrap.appendChild(div);
+});
+}
+
+function upd(i,k,v){data[select.value][i][k]=v;saveDate();render();}
+function addPost(){
+data[select.value].push({date:'',platform:'Meta',format:'Image',status:'Draft',title:'',copy:'',hashtags:'',cta:'',notes:''});
+render();
+}
+function duplicatePost(i){
+data[select.value].push(JSON.parse(JSON.stringify(data[select.value][i])));
+render();
+}
+function download(name,text){
+let a=document.createElement('a');
+a.href=URL.createObjectURL(new Blob([text],{type:'text/plain'}));
+a.download=name;a.click();
+}
+function exportMonth(){
+let m=select.value;
+download(m+'.txt',JSON.stringify(data[m],null,2));
+}
+function exportAll(){
+download('planner-completo.txt',JSON.stringify(data,null,2));
+}
+
+function deletePost(i){
+if(confirm('Delete this post?')){
+data[select.value].splice(i,1);
+saveData();
+render();
+}
+}
+
+select.onchange=render;
+select.value='2026-07';
+render();
+</script>
+
+</body></html>
